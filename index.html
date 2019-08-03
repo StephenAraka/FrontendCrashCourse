@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Frontend dev course</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
     <div class="container">
         <header>
@@ -16,11 +14,13 @@
 
             <nav>
                 <a href="#" class="hide-desktop">
-                    <img src="images/ham.svg" alt="toggle-menu" class="menu">
+                    <img src="images/ham.svg" alt="toggle-menu" class="menu" id="menu">
                 </a>
 
-                <ul id="nav" class="show-desktop hide-mobile">
-                    <li class="exit-btn hide-desktop" id="exit"><img src="images/exit.svg" alt="exit menu"></li>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop">
+                        <img src="images/exit.svg" alt="exit menu">
+                    </li>
                     <li><a href="#">home</a></li>
                     <li><a href="#">services</a></li>
                     <li><a href="#">about</a></li>
@@ -101,6 +101,23 @@
             </div>
         </div>
     </footer>
-</body>
 
+    <script>
+
+        let menu = document.getElementById("menu");
+        let nav = document.getElementById('nav');
+        let exit = document.getElementById('exit');
+
+        menu.addEventListener("click", (e) => {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        exit.addEventListener("click", (e) => {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+    </script>
+
+</body>
 </html>
