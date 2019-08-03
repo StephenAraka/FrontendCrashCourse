@@ -147,9 +147,8 @@
         background-color: #3D444A;
         width: 100%;
         color: rgb(240, 240, 240);
-        margin-top: 15%;
-        padding: 4em 0 2em;
-        border-top-right-radius: 45px;
+        padding: 3em 0;
+        border-top-right-radius: 40px;
         transform: skewY(2deg);
     }
 
